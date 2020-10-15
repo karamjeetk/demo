@@ -1,0 +1,25 @@
+<form #x="ngForm" (ngSubmit)="storeValue(x)">
+<div  class="form-group row"  style="display: flex;">
+  <label for="key" class="col-sm-4 col-form-label">Enter the key to store in local storage: </label>
+  <div class="col-sm-8 form-container">
+    <input type="text" id="key"  name="key" size="20" class="form-control" class="form-control" ngModel />
+  </div>
+  </div>
+  <div  class="form-group row"  style="display: flex;">
+    <label for="value" class="col-sm-4 col-form-label">Enter the value to store in local storage: </label>
+    <div class="col-sm-8 form-container">
+      <input type="text" id="value"  name="value" size="20" class="form-control" class="form-control" ngModel  />
+    </div>
+    </div>
+    <div class="row" style="display: flex;">
+    <div class="col-md-3" style="margin-right: 10px;">
+      <button type="submit" class="btn btn-primary rounded">Store the value in Local Storage </button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary rounded" (click)='getValue()'>Get the value from Local Storage</button>
+    </div>
+    </div>
+</form>
+<div *ngFor="let data of result">
+  {{ data }}
+</div>
